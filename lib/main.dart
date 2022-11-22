@@ -5,8 +5,7 @@ void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
   @override
-  int note;
-  Future<void> playsound(note) async {
+  Future<void> playsound(int note) async {
     final player = AudioPlayer();
     await player.play(AssetSource('note$note.wav'));
   }
